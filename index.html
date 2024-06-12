@@ -1,0 +1,613 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Fizmat - Справочник формул по физике </title>
+<meta name="description" content="Бесплатное решение задач по физике онлайн.">
+<link rel="canonical" href="index.htm"> 
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+<script type="text/javascript" async="" src="ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="icon" href="​&quot;https://podpartoy.ru/favicon.ico&quot;" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<style type="text/css">
+
+button, 
+button:active, 
+button:focus {
+    outline: none;
+}
+@font-face {
+	font-family: 'Montserrat Regular';
+	src: url('Montserrat-Regular.eot');
+	src: url('Montserrat-Regular-1.eot') format('embedded-opentype'),
+	url('Montserrat-Regular.woff') format('woff'),
+	url('Montserrat-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'MathJax_Math-Italic';
+	src: url('MathJax_Math-Italic.woff') format('woff');
+}
+body {
+	background: #f1f1f1;		
+	user-select:none;
+}
+#holder {
+	float: center;
+	font-size: 20px;
+	max-width: 580px;
+	margin: auto;
+}
+.fen{
+	width: 580px;
+	height: 460px;
+	float:center;
+	margin-left:auto;
+	margin-right:auto;
+}
+H4{
+	text-align: center;
+	margin-top: 55px;
+	margin-bottom: 8px;
+	font-size: 22px;
+	font-family: 'Montserrat Regular', Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	margin-left:auto;
+	margin-right:auto;
+	color: #666666;
+	transition: 0.6s linear;
+}
+H4:hover{
+	color: transparent;
+}
+.line3{
+	background: #666666;
+	height: 1px;
+	margin-bottom: 12px;
+}
+.me{
+	height: 68px;
+	width: 68px;
+}
+
+.mema, .memak, .memaMW{
+	display: inline-block;
+	text-decoration: none;
+	transition: 0.35s linear;
+	padding-bottom: 23px;
+	padding-top: 43px;
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: center;
+	margin-top: 5px;
+	font-size: 38px;
+	width: 28px;
+	font-family: 'MathJax_Math-Italic';
+	border-radius: 20px;
+	color: black;
+	background-color: white;
+	box-shadow: 0 0 0.1em #a3a3a3;
+}
+.me :hover{
+	transition: 0.35s linear;
+	border-radius: 35px;
+	transform: rotate(0deg);
+	box-shadow:  0 0 0.3em #a3a3a3;
+}
+.memaMW{
+	padding-left: 15px;
+	padding-right: 25px;
+}
+.memak{
+	padding-left: 6px;
+	padding-right: 34px;
+	font-size: 24px;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+html,
+body {
+	height: 100%;
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	box-shadow: inset 0 0 200px #A8A8A8;
+}
+.content {
+	flex: 1 0 auto;
+	padding-bottom: 15px;
+}
+.footer {
+	flex: 0 0 auto;
+	background: transparent;
+}
+
+
+
+.up_g{
+	background:#fff;
+}
+.up_group{
+	float: center;
+	max-width: 850px;
+	margin: auto;
+	user-select:none;
+	background:#fff;
+}
+.pp{
+	padding: 25px;
+	padding-right: 80px;
+	padding-left: 10px;
+	font-family: 'Montserrat Regular', Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	transition: 0.6s linear;
+	color:#666666;	
+}
+.pp:hover{
+	color:#fff;	
+}
+.pp2{
+	display: inline-block;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 15px;
+	font-family: 'Montserrat Regular', Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	color:#666666;
+	display: none;
+}
+.up{
+	display: inline-block;
+	text-decoration: none;
+	background:#fff;
+	border: 0px solid #ccc;
+	color: #2A2727;
+	font-family: 'Montserrat Regular', Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	border-radius: 0px;
+	text-align: center;
+	transition: 0.2s linear;
+	box-shadow: 0 0 0.3em #a3a3a3;
+}
+#up1{
+	border-right:1px solid #7f7f7f;
+	border-radius: 0px 0px 0px 0px;
+	background:#f1f1f1;
+	margin-top: 7px;
+	margin-bottom: 7px;
+	padding: 10px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+#up2{
+	border-right:1px solid #7f7f7f;
+	border-radius: 0px 0px 0px 0px;
+	margin-top: 7px;
+	margin-bottom: 7px;
+	padding: 10px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	margin-left: -4px;
+}
+#up3{
+	border-radius: 0px 0px 0px 0px;
+	margin-top: 7px;
+	margin-bottom: 7px;
+	padding: 10px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	margin-left: -4px;
+}
+.up:hover{
+	background:#7f7f7f;color:#fff;  text-decoration: none;
+
+}
+.up:active{
+	background:#7f7f7f;color:#fff;  text-decoration: none;
+}
+			#up1:hover{
+				background:#7f7f7f;color:#fff;  text-decoration: none;
+			}
+			#up1:active{
+				background:#7f7f7f;color:#fff;  text-decoration: none;
+			}
+.upvk {
+	display: inline-block;
+	text-align: right;
+	transition: 0.2s linear;
+	float: right;
+	background: #fff; 
+	margin-right: 10px;
+	border-radius: 25px;
+	margin-top: 4px;
+	border:0px solid #666666;
+	box-shadow:  0 0 0.3em #a3a3a3;
+}
+.upvk img{
+	display: inline-block;
+	text-align:center;
+	width:23px;
+	height:23px;
+	float: right;
+	padding: 5px;
+}
+.upvk:hover{
+	background: #f1f1f1; 
+	box-shadow:  0 0 0.3em #a3a3a3;
+}
+.upvk:active{
+	background: #f1f1f1;
+}
+.copi{	
+	text-align: center;
+	float: right;
+	max-width: 200px;
+	margin: auto;
+	font-family: 'Montserrat Regular', Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	font-size: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	color: #a3a3a3;
+}
+.dvk {
+	text-align: right;
+	transition: 0.2s linear;
+	float: right;
+	background: #fff; 
+	margin-right: 10px;
+	border-radius: 25px;
+								/*	box-shadow:0 2px 4px rgba(0,0,0,0.15);*/
+	margin-top: 0px;
+	box-shadow: 0 0 0.3em #a3a3a3;
+	display: none;
+}
+.dvk img{
+	display: inline-block;
+	text-align:center;
+	width:23px;
+	height:23px;
+	float: right;
+	padding: 5px;
+}
+.dvk:hover{
+	background: #f5f5f5; 
+	box-shadow:  0 0 0.3em #a3a3a3;
+}
+.dvk:active{
+	background: #f5f5f5; 
+	box-shadow:  0 0 0.3em #a3a3a3;
+}
+.up_line{
+	height: 0px;
+	width: 500px;
+	background:#666666;
+	margin: auto;
+}
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+.wrapper {
+	box-shadow: inset 0 0 150px #A8A8A8;
+}
+}
+@media (max-width: 1000px) {
+.wrapper {
+	box-shadow: inset 0 0 100px #A8A8A8;
+}
+}
+@media (max-width: 860px) {
+.up_group{
+	max-width: 750px;
+}
+.pp{
+	padding-right: 50px;
+}
+}
+@media (max-width: 800px) {
+.wrapper {
+	box-shadow: none;
+}
+}
+@media (max-width: 760px) {
+.pp{
+	display: none;
+}
+.pp2{
+	display: inline-block;
+}
+.upvk {
+	display: none;
+}
+.copi{
+	display: none;
+}
+.dvk {
+	display: inline-block;
+}
+.up_group {
+	max-width: 460px;
+}
+H4{
+	margin-top: 25px;
+}
+}
+
+
+
+@media (max-width: 600px) {
+#holder {
+	max-width: 436px;
+}
+.fen {
+	max-width: 434px;
+	height: 600px;
+}
+H4{
+	font-size: 20px;
+	max-width: 300px;
+	margin-top: 15px;
+}
+}
+
+@media  (max-width: 492px){
+.up{
+	margin-top: 0px;
+	margin-bottom: 5px;
+	font-size: 14px;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+#up1{
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+#up2{
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+#up3{
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.up_group{
+	background: #f1f1f1;
+	max-width: 381px;
+}
+.up_g{
+	background: #f1f1f1;
+}
+}
+
+
+
+
+
+
+@media  (max-width: 440px){
+#holder {
+	float: center;
+	max-width: 300px;
+	margin: auto;
+}
+.fen{
+	max-width: 288px;
+	height: 890px;
+}
+H4{
+	margin-top: 9px;
+	margin-bottom: 5px;
+}
+}
+@media  (max-width: 390px){
+.up{
+	font-size: 14px;
+	vertical-align: top;
+	box-shadow: none;
+	border-bottom: 1px  solid #7f7f7f;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	background: #666666;
+	color: #fff;
+	vertical-align: top;
+}
+#up1{
+	border-radius: 0px 0px 10px 10px;
+	width: 94px;
+	margin-left: 0px;
+	background: #666666;
+	color: #fff;
+	padding-left: 6px;
+	padding-right: 6px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+#up2{
+	border-radius: 0px 0px 10px 10px;
+	width: 74px;
+	margin-left: 0px;
+	padding-left: 6px;
+	padding-right: 6px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+#up3{
+	border-radius: 0px 0px 10px 10px;
+	width: 85px;
+	height: 27px;
+	padding-top: 11px;
+	margin-left: 0px;
+	padding-left: 6px;
+	padding-right: 6px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.up_group{
+	max-width: 300px;
+}
+.fen{
+	margin-bottom: 10px;
+}
+}
+
+
+
+
+
+
+@media  (max-height: 610px){
+.wrapper {
+	box-shadow: none;
+}
+}
+@media  (min-height: 815px){
+#holder {
+	margin-top: 60px;
+}
+}
+@media  (min-height: 900px){
+#holder {
+	margin-top: 90px;
+}
+}
+@media  (min-height: 1000px){
+#holder {
+	margin-top: 190px;
+}
+}
+@media  (min-height: 1100px){
+#holder {
+	margin-top: 240px;
+}
+}
+@media  (min-height: 1300px){
+#holder {
+	margin-top: 380px;
+}
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="wrapper">
+<div class="content">
+
+<div class="up_g">
+<div class="up_group">
+<span class="pp">Fizspravochnik</span>
+</div>
+</div>
+<div class="up_line"></div>
+
+<div id="holder">
+
+<h4>Нажми на букву искомой физической величины</h4>
+
+<div class="fen">
+<div class="line3"></div>
+<span class="me"><a href="formulssprav/sp.html" class="mema">A</a></span>
+<span class="me"><a href="formulssprav/sp2.html" class="mema">a</a></span>
+<span class="me"><a href="formulssprav/sp3.html" class="mema">B</a></span>
+<span class="me"><a href="formulssprav/sp4.html" class="mema">b</a></span>
+<span class="me"><a href="formulssprav/sp5.html" class="mema">C</a></span>
+<span class="me"><a href="formulssprav/sp6.html" class="mema">c</a></span>
+<span class="me"><a href="formulssprav/sp7.html" class="mema">D</a></span>
+<span class="me"><a href="formulssprav/sp8.html" class="mema">d</a></span>
+<span class="me"><a href="formulssprav/sp9.html" class="mema">E</a></span>
+<span class="me"><a href="formulssprav/sp10.html" class="mema">F</a></span>
+<span class="me"><a href="formulssprav/sp11.html" class="mema">f</a></span>
+<span class="me"><a href="formulssprav/sp12.html" class="mema">g</a></span>
+<span class="me"><a href="formulssprav/sp13.html" class="mema">h</a></span>
+<span class="me"><a href="formulssprav/sp14.html" class="mema">I</a></span>
+<span class="me"><a href="formulssprav/sp36.html" class="mema">j</a></span>
+<span class="me"><a href="formulssprav/sp15.html" class="mema">k</a></span>
+<span class="me"><a href="formulssprav/sp16.html" class="mema">L</a></span>
+<span class="me"><a href="formulssprav/sp17.html" class="mema">l</a></span>
+<span class="me"><a href="formulssprav/sp18.html" class="memaMW">M</a></span>
+<span class="me"><a href="formulssprav/sp19.html" class="mema">m</a></span>
+<span class="me"><a href="formulssprav/sp20.html" class="mema">N</a></span>
+<span class="me"><a href="formulssprav/sp21.html" class="mema">n</a></span>
+<span class="me"><a href="formulssprav/sp22.html" class="mema">P</a></span>
+<span class="me"><a href="formulssprav/sp23.html" class="mema">p</a></span>
+<span class="me"><a href="formulssprav/sp24.html" class="mema">Q</a></span>
+<span class="me"><a href="formulssprav/sp25.html" class="mema">q</a></span>
+<span class="me"><a href="formulssprav/sp26.html" class="mema">R</a></span>
+<span class="me"><a href="formulssprav/sp27.html" class="mema">r</a></span>
+<span class="me"><a href="formulssprav/sp28.html" class="mema">S</a></span>
+<span class="me"><a href="formulssprav/sp29.html" class="mema">T</a></span>
+<span class="me"><a href="formulssprav/sp30.html" class="mema">t</a></span>
+<span class="me"><a href="formulssprav/sp31.html" class="mema">U</a></span>
+<span class="me"><a href="formulssprav/sp32.html" class="mema">V</a></span>
+<span class="me"><a href="formulssprav/sp33.html" class="memaMW">W</a></span>
+<span class="me"><a href="formulssprav/sp34.html" class="mema">x</a></span>
+<span class="me"><a href="formulssprav/sp35.html" class="mema">&#945;</a></span>
+<span class="me"><a href="formulssprav/sp37.html" class="mema">&#949;</a></span>
+<span class="me"><a href="formulssprav/sp38.html" class="mema">&#951;</a></span>
+<span class="me"><a href="formulssprav/sp39.html" class="mema">&#955;</a></span>
+<span class="me"><a href="formulssprav/sp40.html" class="mema">&#956;</a></span>
+<span class="me"><a href="formulssprav/sp41.html" class="mema">&#957;</a></span>
+<span class="me"><a href="formulssprav/sp42.html" class="mema">&#961;</a></span>
+<span class="me"><a href="formulssprav/sp43.html" class="mema">&#963;</a></span>
+<span class="me"><a href="formulssprav/sp44.html" class="mema">&#965;</a></span>
+<span class="me"><a href="formulssprav/sp45.html" class="mema">&#934;</a></span>
+<span class="me"><a href="formulssprav/sp46.html" class="mema">&#966;</a></span>
+<span class="me"><a href="formulssprav/sp47.html" class="mema">&#969;</a></span>
+<span class="me"><a href="formulssprav/sp48.html" class="memak">const</a></span>
+</div>
+</div>
+
+
+
+</div>
+
+
+<div class="footer">
+	<span class="pp2">Fizmat</span>
+	<div class="copi">© Copyright 2k17 — 2020</div>
+
+</div>
+</div>
+
+
+
+</body>
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter46895679 = new Ya.Metrika({ id:46895679, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="watch/46895679" style="position:absolute; left:-9999px;" alt=""></div></noscript> <!-- /Yandex.Metrika counter -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="gtag/js?id=UA-171667492-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-171667492-1');
+</script>
+
+</html>
