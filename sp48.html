@@ -1,0 +1,592 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Физические константы  Fizmat - Справочник формул по физике</title>
+	<meta name="description" content="Список всех констант физики.">
+	<meta name="keywords" content="авогадро,больцмана,планка,ридберга">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<link rel="shortcuticon" href="../favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+<style type="text/css">
+html {
+-webkit-text-size-adjust: none;
+}
+::-webkit-input-placeholder {color:#B8B8B8;}
+::-moz-placeholder          {color:#B8B8B8;}
+:-moz-placeholder           {color:#B8B8B8;}
+:-ms-input-placeholder      {color:#B8B8B8;}
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+button, 
+button:active, 
+button:focus {
+    outline: none;
+}
+input::-webkit-input-placeholder {padding-left: 2px; padding-right: 2px;}
+textarea::-webkit-input-placeholder {padding-left: 2px; padding-right: 2px;}
+::-moz-selection{
+	background: #fff;
+	color: #5d84ae;
+}
+::selection {
+	background: #fff;
+	color: #5d84ae;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+html,
+body {
+	height: 100%;
+	background: #f1f1f1;
+}
+@font-face {
+	font-family: 'Cambria Regular';
+	src: url('../Cambria.eot');
+	src: url('../Cambria-1.eot') format('embedded-opentype'),
+	url('../Cambria.woff') format('woff'),
+	url('../Cambria.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Montserrat Regular';
+	src: url('../Montserrat-Regular.eot');
+	src: url('../Montserrat-Regular-1.eot') format('embedded-opentype'),
+	url('../Montserrat-Regular.woff') format('woff'),
+	url('../Montserrat-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+.content {
+	flex: 1 0 auto;
+	background-color: #f1f1f1;
+	padding-bottom: 15px;
+}
+.footer {
+	flex: 0 0 auto;
+	background: transparent;
+}
+#poupou{
+	transition: 0.3s linear;
+/*	opacity:0;*/
+}
+.center{
+	font-family: 'Cambria Regular', Arial, Helvetica, sans-serif;
+	width:750px;
+	height:auto;
+	margin-left:auto;
+	margin-right:auto;
+	font-size: 20px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	padding: 15px;
+	padding-top: 10px;
+	margin-top: 25px;
+	border-radius: 20px;
+	background: white;
+}
+.loc{
+	font-weight: 100;
+	max-width:95%;
+	color: black;
+	font-size: 20px;
+	float:left,
+	;
+	margin-top: 14px;
+	margin-bottom: 10px;
+	padding-left:30px;
+}
+#line{
+	background: #F5F5F5;
+	height: 2px;
+	width:70%;
+	border: none;
+	margin-left:20px;
+}
+
+
+
+
+.up_g{
+	background:#fff;
+}
+.up_group{
+	float: center;
+	max-width: 850px;
+	margin: auto;
+	user-select:none;
+	background:#fff;
+}
+.pp{
+	padding: 25px;
+	padding-right: 80px;
+	padding-left: 10px;
+	font-family: 'Montserrat Regular', Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	transition: 0.6s linear;
+	color:#666666;	
+}
+.pp:hover{
+	color:#fff;	
+}
+.pp2{
+	display: inline-block;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 15px;
+	font-family: 'Montserrat Regular', Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	color:#666666;
+	display: none;
+}
+.up{
+	display: inline-block;
+	text-decoration: none;
+	background:#fff;
+	border: 0px solid #ccc;
+	color: #2A2727;
+	font-family: 'Montserrat Regular', Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	border-radius: 0px;
+	text-align: center;
+	transition: 0.2s linear;
+	box-shadow: 0 0 0.3em #a3a3a3;
+}
+#up1{
+	border-right:1px solid #7f7f7f;
+	border-radius: 0px 0px 0px 0px;
+	margin-top: 7px;
+	margin-bottom: 7px;
+	padding: 10px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+#up2{
+	border-right:1px solid #7f7f7f;
+	border-radius: 0px 0px 0px 0px;
+	margin-top: 7px;
+	margin-bottom: 7px;
+	padding: 10px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	margin-left: -4px;
+}
+#up3{
+	border-radius: 0px 0px 0px 0px;
+	margin-top: 7px;
+	margin-bottom: 7px;
+	padding: 10px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	margin-left: -4px;
+}
+.up:hover{
+	background:#7f7f7f;color:#fff;  text-decoration: none;
+
+}
+.up:active{
+	background:#7f7f7f;color:#fff;  text-decoration: none;
+}
+#up1:hover{
+	background:#7f7f7f;color:#fff;  text-decoration: none;
+}
+#up1:active{
+	background:#7f7f7f;color:#fff;  text-decoration: none;
+}
+
+.upvk {
+	display: inline-block;
+	text-align: right;
+	transition: 0.2s linear;
+	float: right;
+	background: #fff; 
+	margin-right: 10px;
+	border-radius: 25px;
+	margin-top: 4px;
+	border:0px solid #666666;
+	box-shadow:  0 0 0.3em #a3a3a3;
+}
+.upvk img{
+	display: inline-block;
+	text-align:center;
+	width:23px;
+	height:23px;
+	float: right;
+	padding: 5px;
+}
+.upvk:hover{
+	background: #f1f1f1; 
+	box-shadow:  0 0 0.3em #a3a3a3;
+}
+.upvk:active{
+	background: #f1f1f1;
+}
+.copi{	
+	text-align: center;
+	float: right;
+	max-width: 200px;
+	margin: auto;
+	font-family: 'Montserrat Regular', Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	font-size: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;	
+	color: #a3a3a3;					
+}
+.dvk {
+	text-align: right;
+	transition: 0.2s linear;
+	float: right;
+	background: #fff; 
+	margin-right: 10px;
+	border-radius: 25px;
+								/*	box-shadow:0 2px 4px rgba(0,0,0,0.15);*/
+	margin-top: 0px;
+	box-shadow: 0 0 0.3em #a3a3a3;
+	display: none;
+}
+.dvk img{
+	display: inline-block;
+	text-align:center;
+	width:23px;
+	height:23px;
+	float: right;
+	padding: 5px;
+}
+.dvk:hover{
+	background: #f5f5f5; 
+	box-shadow:  0 0 0.3em #a3a3a3;
+}
+.dvk:active{
+	background: #f5f5f5; 
+	box-shadow:  0 0 0.3em #a3a3a3;
+}
+.up_line{
+	height: 0px;
+	width: 500px;
+	background:#666666;
+	margin: auto;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 1125px){
+.center{
+	max-width:73%;
+}
+}
+@media (max-width: 900px){
+.center{
+	max-width:81%;
+} 
+}
+@media (max-width: 860px) {
+.up_group{
+	max-width: 750px;
+}
+.pp{
+	padding-right: 50px;
+}
+}
+@media (max-width: 820px){
+.center{
+	max-width:89%;
+	box-shadow: none;
+	padding: 0px;
+	margin-top: 0px;		   
+	border-radius: 0px;
+	background: #fff;
+}
+.content {
+	background: #fff;
+}
+								/*.footer {
+									background: #fff;
+								}
+								#topline{
+									background: #fff;
+								}*/
+#line2{
+	background: #F5F5F5;
+}
+.content {
+	background: #fff;
+}
+.footer {
+	background: #fff;
+}
+.up_g {
+	background: #f1f1f1;
+}
+.up_group {
+	background: #f1f1f1;
+}
+}
+@media (max-width: 766px) {
+.center {
+	max-width:95%;
+	font-size: 18px;
+}
+}
+@media (max-width: 760px) {
+.pp{
+	display: none;
+}
+.pp2{
+	display: inline-block;
+}
+.upvk {
+	display: none;
+}
+.copi{
+	display: none;
+}
+.dvk {
+	display: inline-block;
+}
+.up_group {
+	max-width: 460px;
+}
+}
+@media  (max-width: 690px) {
+.center{
+	font-size: 17px;
+} 
+.loc{
+	font-size: 18px;
+}
+}
+@media (max-width: 670px) {
+.pp{
+	display: none;
+}
+.pp2{
+	display: inline-block;
+}
+.upvk {
+	display: none;
+}
+.copi{
+	display: none;
+}
+.dvk {
+	display: inline-block;
+}
+}
+@media  (max-width: 550px) {
+.center{
+	max-width:98%;
+	font-size: 16px;
+}
+.loc{
+	max-width:95%;
+	font-size: 17px;
+}
+}
+@media  (max-width: 492px){
+.up{
+	margin-top: 0px;
+	margin-bottom: 5px;
+	font-size: 14px;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+#up1{
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+#up2{
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+#up3{
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.up_group{
+	background: #fff;
+	max-width: 381px;
+}
+.up_g{
+	background: #fff;
+}
+}
+@media  (max-width: 490px) {
+.center{
+	max-width:100%;
+	font-size: 15px;
+}
+.loc{
+	max-width:100%;
+	font-size: 16px;
+}
+}
+@media (max-width: 440px) {
+.center {
+	font-size: 14px;
+}
+.loc{
+	font-size: 15px;
+	padding-left: 4px;
+}
+#line{
+	width:90%;
+	margin-left:4px;
+}
+}
+@media  (max-width: 390px){
+.up{
+	font-size: 14px;
+	vertical-align: top;
+	box-shadow: none;
+	border-bottom: 1px  solid #7f7f7f;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	background: #666666;
+	color: #fff;
+	vertical-align: top;
+}
+#up1{
+	border-radius: 0px 0px 10px 10px;
+	width: 94px;
+	margin-left: 0px;
+	background: #666666;
+	color: #fff;
+	padding-left: 6px;
+	padding-right: 6px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+#up2{
+	border-radius: 0px 0px 10px 10px;
+	width: 74px;
+	margin-left: 0px;
+	padding-left: 6px;
+	padding-right: 6px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+#up3{
+	border-radius: 0px 0px 10px 10px;
+	width: 85px;
+	height: 27px;
+	padding-top: 11px;
+	margin-left: 0px;
+	padding-left: 6px;
+	padding-right: 6px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.up_group{
+	max-width: 300px;
+}
+}
+@media (max-width: 350px) {
+.center {
+	font-size: 13px;
+}
+.loc{
+	font-size: 14px;
+	padding-left: 4px;
+}
+}
+
+</style>
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+
+<script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"">
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+<div class="wrapper">
+<div class="content">
+<div class="up_g">
+<div class="up_group">
+<span class="pp">Fizmat - Справочник формул по физике</span>
+<span class="upa">
+	
+</span>
+
+</div>
+</div>
+<div class="up_line"></div>
+<div id="poupou">
+<div class="center">
+<div class="loc">\(e=1.602\cdot {10}^{-19}\,\text{Кл}\) - Элементарный заряд</div><div id="line"></div>
+<div class="loc">\({m}_{e}=9.109\cdot {10}^{-31}\,\text{кг}\) - Масса электрона</div><div id="line"></div>
+<div class="loc">\({m}_{n}=1.675\cdot {10}^{-27}\,\text{кг}\) - Масса нейтрона</div><div id="line"></div>
+<div class="loc">\({m}_{p}=1.673\cdot {10}^{-27}\,\text{кг}\) - Масса протона</div><div id="line"></div>
+<div class="loc">\(а.е.м.=1.65976 \cdot {10}^{-27}\,\text{кг}\) - Атомная единица массы</div><div id="line"></div>
+<div class="loc">\(g=9.81\,{\text{м/с}}^{2}\) - Ускорение свободного падения</div><div id="line"></div>
+<div class="loc">\(G=6.67\cdot{10}^{-11}\,\frac{Н \cdot{м}^{2}}{{\text{кг}}^{2}}\) - Гравитационная постоянная</div><div id="line"></div>
+<div class="loc">\({\varepsilon}_{0} = 8.85\cdot{10}^{-12}\,\frac{Ф}{м}\) - Электрическая постоянная</div><div id="line"></div>
+<div class="loc">\(k=1.38 \cdot {10}^{-23}\,\frac{\text{Дж}}{К}\) - Постоянная Больцмана</div><div id="line"></div>
+<div class="loc">\({N}_{A}=6.02 \cdot {10}^{23}\,{\text{моль}}^{-1}\) - Число Авогадро</div><div id="line"></div>
+<div class="loc">\(R=8.31\,\frac{\text{Дж}}{\text{моль · К}}\) - Универсальная газовая постоянная</div><div id="line"></div>
+<div class="loc">\(t=-273.15\,^{\circ}С\,=0\,К\) - Абсолютный ноль температуры</div><div id="line"></div>
+<div class="loc">\(p=101325\,\text{Па}\) - Стандартное атмосферное давление</div><div id="line"></div>
+<div class="loc">\(c=3 \cdot {10}^{8}\,\text{м/с}\) - Скорость света в вакууме</div><div id="line"></div>
+<div class="loc">\(h=6.626 \cdot {10}^{-34}\,\text{Дж · с}\) - Постоянная Планка</div><div id="line"></div>
+<div class="loc">\(R=10973731.77\,{м}^{-1}\) - Постоянная Ридберга</div><div id="line"></div>
+</div>
+</div>
+</div>
+<div class="footer">
+	<span class="pp2">Fizmat - Справочник формул по физике</span>
+	<div class="copi">© Copyright 2k17 — 2020</div>
+	
+</div>
+</div>
+</body>
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter46895679 = new Ya.Metrika({ id:46895679, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="../watch/46895679" style="position:absolute; left:-9999px;" alt=""></div></noscript> <!-- /Yandex.Metrika counter -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="../gtag/js?id=UA-171667492-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-171667492-1');
+</script>
+
+</html>
